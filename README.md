@@ -1,0 +1,1 @@
+To run, use `php -S localhost:8000 -t public`

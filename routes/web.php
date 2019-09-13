@@ -11,6 +11,15 @@
 |
 */
 
+$router->group(['namespace' => 'Api', 'prefix' => 'api'], function () use ($router) {
+	// v1 version Api
+	$router->group(['namespace' => 'V1'], function() use ($router) {
+		$router->get('/', function() use ($router) {
+			return $router->app->version();
+		});
+	});
+});
+
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return view('index');
 });

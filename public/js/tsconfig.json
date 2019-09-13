@@ -6,6 +6,8 @@
       "dom.iterable",
       "esnext"
     ],
+    "outDir": "./dist/",
+    "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,9 +19,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "components/*": [
+        "src/components/*"
+      ],
+    }
   },
   "include": [
-    "src"
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "cypress",
+    "__test__",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
